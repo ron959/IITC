@@ -45,4 +45,3 @@ if (isRaining) {
 }
 
 // *Try to avoid using nested if statements as much as possible... it can get messy.
-dghsfghdgfhdf dfgh dfgh dfgh fgh dfh dggfh fh gfhf
