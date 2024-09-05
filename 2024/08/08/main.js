@@ -195,10 +195,11 @@ const capitalizedWords = getCapitalizedWords(words);
 // The function should return an object where keys are product names and values are arrays of orders.
 
 function groupOrdersByProduct(orders) {
-
+const newObj={}
 for(let i=0; i<orders.length; i++){
-}
-
+let key=orders[i].product
+newObj[key]= orders[i]}
+return newObj
 }
 
 const groupedOrders = groupOrdersByProduct(orders);
@@ -225,4 +226,4 @@ function titleCaseWords(words) {
 }
 
 const titleCasedWords = titleCaseWords(words);
-// console.log("Title Cased Words:", titleCasedWords);   
+// console.log("Title Cased Words:", titleCasedWords);
