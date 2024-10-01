@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+    color: hsl(217, 19%, 35%); /* Very dark grayish blue */
+    background-color: hsl(210, 46%, 95%); /* Light grayish blue */
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Styles */
+.grid-container {
+    background-color: hsl(263, 55%, 52%); /* Moderate violet */
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 10px; /* Optional: spacing between items */
+}
+
+/* Grid Items */
+.grid-container > div {
+    background-color: hsl(219, 29%, 14%); /* Very dark blackish blue */
+    text-align: center;
+    padding: 20px;
+    border: 1px solid hsl(0, 0%, 81%); /* Light gray */
+    color: hsl(0, 0%, 100%); /* White */
+    border-radius: 8px;
+}
+
+/* Specific Items (restored starting positions) */
+.item1 {
+    grid-column: 1 / span 2; /* Span across 2 columns */
+}
+
+.item3 {
+    grid-row: span 2; /* Span across 2 rows */
+}
+
+.item5 {
+    grid-column: 2 / span 2; /* Span across 2 columns */
+}
+
+/* Responsive Layout */
+@media (max-width: 900px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 375px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Adjust to 1 column on mobile */
+    }
+}

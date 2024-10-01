@@ -1,0 +1,69 @@
+
+body {
+    background-color: hsl(30, 54%, 90%);
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 200vh;
+}
+
+#container {
+    background-color: white;
+    padding: 5vh;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    flex-wrap: wrap;
+}
+ol{
+    
+}
+img {
+    width: 125vh;
+    height: 50vh;
+    border-radius: 15px;
+}
+
+#preperation {
+    background-color: hsl(330, 100%, 98%);
+    padding: 5px;
+    border-radius: 15px;
+}
+#preperation h3{
+    color: hsl(332, 51%, 32%);
+    padding-left: 20px 
+}
+li span {
+    font-weight: bold;
+}
+
+.secoundTitle{
+    color: hsl(14, 45%, 36%);
+}
+
+.table {
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.table-row {
+    border-bottom: 1px solid;
+      }
+  
+  .table-data {
+    padding: 8px;
+    text-align: left;
+    gap:20px
+  }
+  
+  .nutritional-value {
+    font-weight: bold;
+    color: #333;
+    padding-left: 200%;
+  }
