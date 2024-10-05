@@ -34,4 +34,4 @@ randomNumbers.forEach(function(number){
     }
     
 })
-console.log(count);
+console.log(count);//
