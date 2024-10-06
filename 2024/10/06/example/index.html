@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATM Project</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 10px;
+      background-color: #f7f7f7;
+    }
+    #atm {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: 0 auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    #atm h2, #atm h3 {
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    input[type="text"], input[type="password"], input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    #transaction-section, #balance-section {
+      margin-top: 20px;
+    }
+    #transaction-section {
+      display: none;
+    }
+    #balance-section {
+      display: none;
+    }
+    #pin-message, #transaction-message {
+      color: red;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="atm">
+    <h2>ATM Machine</h2>
+
+    <!-- Card Number and PIN Entry -->
+    <div id="card-section">
+      <label for="card-number">Enter Card Number:</label>
+      <input type="text" id="card-number" placeholder="1234-5678-9876-5432" /><br />
+
+      <label for="pin">Enter PIN (4 digits):</label>
+      <input type="password" id="pin" maxlength="4" placeholder="example: 1111" /><br />
+      <button id="submit-pin">Submit PIN</button>
+      <p id="pin-message"></p>
+    </div>
+
+    <!-- Balance Section -->
+    <div id="balance-section">
+      <h3>Your Balance: $<span id="balance-amount">1000</span></h3>
+
+      <button id="show-balance">Show Balance</button>
+      <button id="deposit-btn">Deposit</button>
+      <button id="withdraw-btn">Withdraw</button>
+      <p id="transaction-message"></p>
+    </div>
+
+    <!-- Transaction Input -->
+    <div id="transaction-section">
+      <label for="transaction-amount">Enter Amount:</label>
+      <input type="number" id="transaction-amount" /><br />
+      <button id="process-transaction">Process Transaction</button>
+    </div>
+  </div>
+
+  <script>
+    let balance = 1000;
+    let attempts = 0;
+    const maxAttempts = 3;
+    const validPIN = "1234"; // Example correct PIN
+
+    document.getElementById("submit-pin").addEventListener("click", function () {
+      const pin = document.getElementById("pin").value;
+      const message = document.getElementById("pin-message");
+
+      if (pin.length !== 4 || isNaN(pin)) {
+        message.textContent = "PIN must be 4 digits.";
+      } else if (pin !== validPIN) {
+        attempts++;
+        if (attempts >= maxAttempts) {
+          message.textContent = "Your card has been blocked.";
+          document.getElementById("submit-pin").disabled = true;
+        } else {
+          message.textContent = "Incorrect PIN. Try again.";
+        }
+      } else {
+        message.textContent = "PIN correct!";
+        document.getElementById("balance-section").style.display = "block";
+        document.getElementById("card-section").style.display = "none";
+      }
+    });
+
+    document.getElementById("show-balance").addEventListener("click", function () {
+      document.getElementById("transaction-message").textContent = `Your current balance is $${balance}`;
+    });
+
+    document.getElementById("deposit-btn").addEventListener("click", function () {
+      startTransaction("deposit");
+    });
+
+    document.getElementById("withdraw-btn").addEventListener("click", function () {
+      startTransaction("withdraw");
+    });
+
+    function startTransaction(type) {
+      document.getElementById("transaction-section").style.display = "block";
+      document.getElementById("process-transaction").onclick = function () {
+        const amount = parseFloat(document.getElementById("transaction-amount").value);
+        if (isNaN(amount) || amount <= 0) {
+          document.getElementById("transaction-message").textContent = "Invalid amount.";
+          return;
+        }
+
+        if (type === "deposit") {
+          balance += amount;
+          document.getElementById("transaction-message").textContent = `Successfully deposited $${amount}. New balance: $${balance}`;
+        } else if (type === "withdraw") {
+          if (balance >= amount) {
+            balance -= amount;
+            document.getElementById("transaction-message").textContent = `Successfully withdrew $${amount}. New balance: $${balance}`;
+          } else {
+            document.getElementById("transaction-message").textContent = "Insufficient balance.";
+          }
+        }
+        document.getElementById("transaction-section").style.display = "none";
+        document.getElementById("balance-amount").textContent = balance;
+      };
+    }
+  </script>
+
+</body>
+</html>

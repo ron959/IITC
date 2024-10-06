@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ATM Project</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
+    <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
 
     <div id="atm">
         <h2>ATM Machine</h2>
 
-        <!-- Card Number and PIN Entry -->
+        <!-- THIS IS THE ENTER PIN -->
         <div id="card-section">
             <label for="pin">Enter PIN (4 digits):</label>
-            <input type="password" id="pin" maxlength="4" placeholder="****" /><br />
+            <input type="password" id="pin" maxlength="4" placeholder="type here your secret ATM code" /><br />
             <button id="submit-pin">Submit PIN</button>
             <p id="pin-message"></p>
         </div>
 
         <!-- Balance Section -->
         <div id="balance-section" class="hidden">
-            <h3>Your Balance: $<span id="balance-amount">1000</span></h3>
+            <!-- <h3>Your Balance: $<span id="balance-amount">1000</span></h3> -->
 
             <button id="show-balance">Show Balance</button>
             <button id="deposit-btn">Deposit</button>
