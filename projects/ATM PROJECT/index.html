@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Project</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+        <!-- gif  -->
+    <div id="loading-screen">
+        <img src="atmGif.gif" alt="ATM Loading" id="atm-gif">
+    </div>
+    <div id="atm" class="hidden">
+        <h2>ATM Machine</h2>
+
+        <!-- THIS IS THE ENTER PIN -->
+        <div id="card-section">
+            <label for="pin">Enter PIN (4 digits):</label>
+            <input type="password" id="pin" maxlength="4" placeholder="type here your secret ATM code" /><br />
+            <button id="submit-pin">Submit PIN</button>
+            <p id="pin-message"></p>
+        </div>
+
+            <!-- here is the actions bar -->
+        <div id="balance-section" class="hidden">
+            <h3>Your Balance: $<span id="balance-amount">1000</span></h3>
+            <button id="deposit-btn">Deposit</button>
+            <button id="withdraw-btn">Withdraw</button>
+            <button id="exit-btn" class="hidden"> exit</button>
+            <p id="transaction-message"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>
