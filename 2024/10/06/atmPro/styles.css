@@ -26,7 +26,7 @@ body {
     background-color: #222831;
     padding: 20px;
     border-radius: 10px;
-    max-width: 400px; /* Container width */
+    max-width: 400px; 
     margin: 0 auto;
     box-shadow: 0 4px 10px black;
 }
@@ -58,7 +58,7 @@ label {
 }
 
 input[type="text"], input[type="password"], input[type="number"] {
-    width: 100%; /* Full-width for input fields */
+    width: 100%; 
     padding: 10px;
     margin-bottom: 10px;
     border: none;
@@ -136,5 +136,5 @@ button {
 }
 
 .big-button:hover {
-    background-color: #0046a1; /* Slightly darker blue on hover */
+    background-color: #0046a1; 
 }

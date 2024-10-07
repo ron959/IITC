@@ -1,14 +1,11 @@
 window.onload = function() {
     setTimeout(function() {
-        // Completely remove the loading screen from the DOM
         const loadingScreen = document.getElementById("loading-screen");
         if (loadingScreen) {
-            loadingScreen.remove(); // This removes the GIF div from the DOM
+            loadingScreen.remove(); 
         }
-        
-        // Show the ATM interface
         document.getElementById("atm").classList.remove("hidden");
-    }, 2000); // 3000 milliseconds = 3 seconds
+    }, 2000);
 };
 
 let balance= 1000
