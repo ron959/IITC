@@ -1,57 +1,140 @@
+
+
+#loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222831;
+}
+
+#atm-gif {
+    max-width: 300px; 
+}
+
+* {
+    box-sizing: border-box; 
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: fantasy;
     margin: 20px;
-    background-color:bisque;
+    background-color: #393E46;
 }
 
 #atm {
-    background-color:beige;
+    background-color: #222831;
     padding: 20px;
     border-radius: 10px;
-    max-width: 400px;
+    max-width: 400px; /* Container width */
     margin: 0 auto;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px black;
 }
 
 #atm h2, #atm h3 {
     text-align: center;
+    font-family: fantasy;
+    background-color: antiquewhite;
+    
 }
 
 label {
     display: block;
-    margin: 10px 0 5px;
+    margin: 10px 0; 
+    width: 100%; 
+    text-align: left; 
+    color: rgb(99, 96, 96);
+    font-family:'Courier New', Courier, monospace;
+    
+}
+
+#pin-message {
+    color: rgb(235, 23, 23); 
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center; 
 }
 
 input[type="text"], input[type="password"], input[type="number"] {
-    width: 100%;
-    padding: 8px;
+    width: 100%; /* Full-width for input fields */
+    padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: none;
     border-radius: 5px;
 }
 
+#withdraw-btn {
+    background-color: #DA8359; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#deposit-btn {
+    background-color: #A5B68D; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#exit-btn {
+    display: inline-block;
+    background-color:  #393E46;
+    color:#ff0000;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
 button {
-    width: 100%;
+    width: 100%; 
     padding: 10px;
     margin-bottom: 10px;
-    background-color: #28a745;
+    background-color: #00ADB5;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #218838;
-}
-
 .hidden {
     display: none;
 }
 
-#pin-message, #transaction-message {
-    color: red;
+
+#transaction-message {
+    color: rgb(21, 0, 255);
     text-align: center;
 }
 
+.big-input {
+    width: 100%; 
+    padding: 15px;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
 
+.big-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.big-button:hover {
+    background-color: #0046a1; /* Slightly darker blue on hover */
+}

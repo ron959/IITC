@@ -1,57 +1,28 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color:bisque;
+/* Loading screen styling */
+#loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222831;
 }
 
+#atm-gif {
+    max-width: 300px; /* Adjust size as needed */
+}
+
+.hidden {
+    display: none; /* Hides elements */
+}
+
+/* ATM section styling */
 #atm {
-    background-color:beige;
+    background-color: #222831;
     padding: 20px;
     border-radius: 10px;
     max-width: 400px;
     margin: 0 auto;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-#atm h2, #atm h3 {
+    box-shadow: 0 4px 10px black;
     text-align: center;
-}
-
-label {
-    display: block;
-    margin: 10px 0 5px;
-}
-
-input[type="text"], input[type="password"], input[type="number"] {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #28a745;
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }
-
-button:hover {
-    background-color: #218838;
-}
-
-.hidden {
-    display: none;
-}
-
-#pin-message, #transaction-message {
-    color: red;
-    text-align: center;
-}
-
-

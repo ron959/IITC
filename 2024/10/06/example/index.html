@@ -4,49 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ATM Project</title>
-    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <div id="atm">
-        <h2>ATM Machine</h2>
+    <!-- Loading screen (GIF section) -->
 
-        <!-- THIS IS THE ENTER PIN -->
+
+    <!-- ATM section (Initially hidden) -->
+    <div id="atm" class="hidden">
+        <h2>ATM Machine</h2>
+        <!-- ATM interface content goes here -->
         <div id="card-section">
             <label for="pin">Enter PIN (4 digits):</label>
-            <input type="password" id="pin" maxlength="4" placeholder="type here your secret ATM code" /><br />
+            <input type="password" id="pin" maxlength="4" placeholder="Enter your secret PIN" /><br />
             <button id="submit-pin">Submit PIN</button>
             <p id="pin-message"></p>
         </div>
-
-        <!-- Balance Section -->
-        <!-- <div id="balance-section" class="hidden">
-            <h3>Your Balance: $<span id="balance-amount">1000</span></h3>
-
-            <button id="show-balance">Show Balance</button>
-            <button id="deposit-btn">Deposit</button>
-            <button id="withdraw-btn">Withdraw</button>
-            <p id="transaction-message"></p>
-        </div> -->
-        <div id="balance-section" class="hidden">
-            <h3>Your Balance: $<span id="balance-amount">1000</span></h3>
-        
-            <!-- Deposit and Withdraw buttons -->
-            <button id="deposit-btn">Deposit</button>
-            <button id="withdraw-btn">Withdraw</button>
-        
-            <!-- Transaction message area where inputs and messages will appear -->
-            <p id="transaction-message"></p>
-        </div>
-
-        <!-- Transaction Input -->
-        <!-- <div id="transaction-section" class="hidden">
-            <label for="transaction-amount">Enter Amount:</label>
-            <input type="number" id="transaction-amount" /><br />
-            <button id="process-transaction">Process Transaction</button>
-        </div> -->
     </div>
 
-    <script src="script.js"></script> <!-- Link to JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>
