@@ -87,7 +87,7 @@ input[type="text"], input[type="password"], input[type="number"] {
 
 #exit-btn {
     display: inline-block;
-    background-color:  #393E46;
+    background-color: #FCFAEE;
     color:#ff0000;
     border: none;
     border-radius: 5px;
