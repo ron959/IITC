@@ -1,3 +1,4 @@
+//atm gif runs 2 sec
 window.onload = function() {
     setTimeout(function() {
         const loadingScreen = document.getElementById("loading-screen");
@@ -13,8 +14,9 @@ let attempts= 0
 const maxAttempts= 3
 const validPIN = "1234";
 
+
 const PinBot= document.querySelector("#submit-pin").addEventListener('click',function () {
-const pin= document.querySelector('#pin').value;
+const pin= document.querySelector('#pin').value; //the pincode the the client type
 const message= document.querySelector("#pin-message");
 const cardSection= document.getElementById("card-section");
 if(pin.length< 4 || isNaN(pin)){
@@ -23,7 +25,7 @@ if(pin.length< 4 || isNaN(pin)){
 }else if(validPIN !== pin){
     attempts++
     message.textContent = `Incorrect PIN. You have ${(maxAttempts - attempts)+1} attempts remaining.`;
-    if(attempts> maxAttempts){
+    if(attempts> maxAttempts){ //after 3 attempts the client can type anymore 
         cardSection.classList.add("hidden");
         alert("You have reached the limit of attempts")
 }}
@@ -101,6 +103,6 @@ withdrawBtn.addEventListener("click", function () {
     });
 });
 
-//exit button
+//exit button refresh the page which restart the system
 document.getElementById("exit-btn").addEventListener("click", function () {
     location.reload()}) 
