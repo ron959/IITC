@@ -9,7 +9,6 @@
   
   <title>Frontend Mentor | Interactive rating component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -21,6 +20,9 @@
   <div  class='box'>
   <!-- Rating state start -->
    <div id="rating-container" >
+
+  <div id="star-icon"><img src="/interactive-rating-component-main/images/icon-star.svg" alt="Star Icon" width="17" height="16"></div>
+
   <h1>
     How did we do?
   </h1>
@@ -29,7 +31,7 @@
     to help us improve our offering!
   </p>
   <div id="numbers-container">
-    <button> 1</button> 
+  <button> 1</button> 
   <button> 2</button> 
   <button> 3</button> 
   <button> 4</button>
@@ -43,15 +45,17 @@
 
 <!-- Thank you state start -->
 <div id="thank-container" class="hidden">
+<div id="thank-icon"><img src="/interactive-rating-component-main/images/illustration-thank-you.svg" alt="thank Icon" width="120" height="120"></div>
   <p id="you-selected">
   You have selected <span id="selected-number"></span> out of 5
   </p>
 
 <h1>Thank you! </h1>
-<p>
+<span id="thank-p">
 We appreciate you taking the time to give a rating. If you ever need more support, 
 don’t hesitate to get in touch!
-</p>
+
+</span>
 </div>
 </div>
   <!-- Thank you state end -->

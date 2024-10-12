@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const numButtons = document.querySelectorAll('#numbers-container button');
     const allBtns = document.querySelectorAll('button');
     const numSelected = document.getElementById('selected-number');    
-    
+
     // Variable to keep track of the previously selected button
     let previousButton = null;
 
@@ -38,23 +38,23 @@ document.addEventListener('DOMContentLoaded', function() {
             previousButton = selectedButton;
             const selectedNumber = button.textContent;
             numSelected.textContent = `${selectedNumber}`;
-
-            // Log the selected number to the console
-            console.log(`Selected Number: ${selectedNumber}`);
         });
     });
-    
 
-    // Corrected submit button selection
-    const submitBtn = document.querySelector('#submit-btn'); // Correct typo
+    // Submit button logic
+    const submitBtn = document.querySelector('#submit-btn');
     const thankContainer = document.getElementById('thank-container');
     const ratingContainer = document.getElementById('rating-container');
 
     // Add event listener to the submit button
     submitBtn.addEventListener('click', () => {
-        thankContainer.classList.remove("hidden");
-        ratingContainer.classList.add("hidden");
-        // document.getElementById(box).style.alignItems= 
+        if (previousButton === null) {
+            alert('You have to click a number to submit');
+        } else {
+            // Show the thank-you container and hide the rating container
+            thankContainer.classList.remove('hidden');
+            ratingContainer.classList.add('hidden');
+        }
     });
 });
 
