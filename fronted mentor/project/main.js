@@ -2,7 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Select all buttons inside #numbers-container and all buttons on the page
     const numButtons = document.querySelectorAll('#numbers-container button');
     const allBtns = document.querySelectorAll('button');
-
+    const numSelected = document.getElementById('selected-number');    
+    
     // Variable to keep track of the previously selected button
     let previousButton = null;
 
@@ -35,10 +36,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Update the previousButton to the current one
             previousButton = selectedButton;
+            const selectedNumber = button.textContent;
+            numSelected.textContent = `${selectedNumber}`;
 
-            return `${button.textContent}`;
+            // Log the selected number to the console
+            console.log(`Selected Number: ${selectedNumber}`);
         });
     });
+    
 
     // Corrected submit button selection
     const submitBtn = document.querySelector('#submit-btn'); // Correct typo
@@ -49,5 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
     submitBtn.addEventListener('click', () => {
         thankContainer.classList.remove("hidden");
         ratingContainer.classList.add("hidden");
+        // document.getElementById(box).style.alignItems= 
     });
 });
+

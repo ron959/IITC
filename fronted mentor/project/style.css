@@ -1,52 +1,86 @@
-body{
-    background-color:  hsl(216, 12%, 8%) ;
-    flex-direction: ;
+body {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 400; /* Default weight */
+    background-color: hsl(216, 12%, 8%);
     display: flex;
-    justify-content: center;
-    align-content: center;
+    flex-direction: column; /* Specify a valid direction */
+    justify-content: center; /* Center the content vertically */
+    align-items: center; /* Center the content horizontally */
+    min-height: 100vh; /* Ensure the body fills the viewport height */
+    margin: 0; /* Remove default margin */
+    
+}
+
+h1 {
+   
+        font-weight: 700;
+        color: white;
+        margin-bottom: 20px;
+        text-align: center;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 20%;
+    background-color: hsl(213, 19%, 18%);
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px black;
     flex-wrap: wrap;
 }
 
-h1{
-    color: white;
-}
-.box{
-display: flex;  
-flex-direction: column;
-background-color:hsl(213, 19%, 18%);
-align-items: flex-start;
-padding: 20px;
-border-radius: 10px;
-width: 50%; 
-box-shadow: 0 4px 10px black;
-flex-wrap: wrap;
-}
-
-#numbers-container{
+#numbers-container {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: center; /* Use align-items instead of align-content */
     justify-content: space-between;
     width: 100%;
-    color: black
-}
-#numbers-container button {
-    width: 40px;  
-    height: 40px;
-    border-radius: 50%; 
-    background-color:hsl(217, 12%, 63%); 
-    cursor: pointer; 
-    border: 0;
+    color: black;
 }
 
-#submit-btn{
+#numbers-container button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: hsl(217, 12%, 63%);
+    cursor: pointer;
+    border: none;
+    align-self: space-between;
+    font-size: 1rem;
+    transition: background-color 0.3s; 
+}
+
+
+
+#submit-btn {
     width: 100%;
     border-radius: 10px;
-    border: 0;
+    border: none;
     background-color: hsl(25, 97%, 53%);
-    cursor: pointer; 
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+    margin-top: 20px;
 }
 
-.hidden{
+
+
+.hidden {
     display: none;
 }
+
+#you-selected {
+    color: hsl(25, 97%, 53%);
+    background-color: hsl(217, 12%, 63%);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 10px;
+    align-self: center; /* Ensure it aligns horizontally within the flexbox */
+}
+

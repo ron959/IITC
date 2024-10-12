@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
@@ -17,7 +18,7 @@
 </head>
 <body>
 
-  <div class='box'>
+  <div  class='box'>
   <!-- Rating state start -->
    <div id="rating-container" >
   <h1>
@@ -42,12 +43,15 @@
 
 <!-- Thank you state start -->
 <div id="thank-container" class="hidden">
-You selected `${selectedNumber}` out of 5
+  <p id="you-selected">
+  You have selected <span id="selected-number"></span> out of 5
+  </p>
 
-Thank you!
-
+<h1>Thank you! </h1>
+<p>
 We appreciate you taking the time to give a rating. If you ever need more support, 
 don’t hesitate to get in touch!
+</p>
 </div>
 </div>
   <!-- Thank you state end -->
