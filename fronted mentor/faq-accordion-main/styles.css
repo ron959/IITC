@@ -1,0 +1,93 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  height: 100vh;
+  font-family: 'Work Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(275, 100%, 97%);
+  overflow: hidden;
+}
+
+/* Background styling */
+.background {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/images/background-pattern-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: contain; 
+  z-index: -1;
+}
+
+/* FAQ container styling */
+.faq-container {
+  margin-bottom: 180px;
+  width: 400px;
+  max-width: 400px;
+  padding: 40px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+/* Header styling */
+h1 {
+  font-size: 2rem;
+  color: hsl(292, 42%, 14%);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* FAQ items styling */
+.faq-item {
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 10px;
+}
+
+/* Question styling */
+.faq-item h3 {
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: #2d033b;
+}
+
+/* Answer styling */
+.faq-item p {
+  margin-top: 10px;
+  display: none;
+  color: #555;
+}
+
+/* Toggle icon styling */
+.toggle img {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Rotate icon when active */
+.faq-item.active .toggle img {
+  transform: rotate(180deg);
+}
+
+/* Active state: show the answer */
+.faq-item.active p {
+  display: block;
+}

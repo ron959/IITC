@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ Accordion</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Static Background Layer -->
+  <div class="background"></div>
+
+  <!-- FAQ Container -->
+  <div class="faq-container" >
+    <h1><span><img src="./assets/images/icon-star.svg" class="star-img" alt="star icon"></span> FAQs</h1>
+
+    <div class="faq-item" onmousemove="changeColor(this, 'hsl(292, 16%, 49%)')" onmouseout="resetColor(this)">
+      <h3>
+        What is Frontend Mentor, and how will it help me?
+        <span class="toggle">
+          <img src="./assets/images/icon-plus.svg" class="icon-img" alt="plus icon">
+        </span>
+      </h3>
+      <p>
+        Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with projects in HTML, CSS, and JavaScript.
+      </p>
+    </div>
+
+    <div class="faq-item" onmousemove="changeColor(this, 'hsl(292, 16%, 49%)')" onmouseout="resetColor(this)">
+      <h3>
+        Is Frontend Mentor free?
+        <span class="toggle">
+          <img src="./assets/images/icon-plus.svg" class="icon-img" alt="plus icon">
+        </span>
+      </h3>
+      <p>
+        Yes, Frontend Mentor offers both free and premium coding challenges.
+      </p>
+    </div>
+
+    <div class="faq-item" onmousemove="changeColor(this, 'hsl(292, 16%, 49%)')" onmouseout="resetColor(this)">
+      <h3>
+        Can I use Frontend Mentor projects in my portfolio?
+        <span class="toggle">
+          <img src="./assets/images/icon-plus.svg" class="icon-img" alt="plus icon">
+        </span>
+      </h3>
+      <p>
+        Yes, you can use projects completed on Frontend Mentor in your portfolio.
+      </p>
+    </div>
+
+    <div class="faq-item" onmousemove="changeColor(this, 'hsl(292, 16%, 49%)')" onmouseout="resetColor(this)">
+      <h3>
+        How can I get help if I'm stuck on a Frontend Mentor challenge?
+        <span class="toggle">
+          <img src="./assets/images/icon-plus.svg" class="icon-img" alt="plus icon">
+        </span>
+      </h3>
+      <p>
+        The best place to get help is inside Frontend Mentor's Discord community.
+      </p>
+    </div>
+  </div>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
