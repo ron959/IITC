@@ -1,0 +1,247 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: cursive;
+  background-color: #121212;
+  color: white;
+  margin: 0;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.9); /* Transparent black */
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+/* Navigation Icons */
+.nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+
+.nav-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.nav-icon:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+/* Search Container */
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 25px;
+  
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+  padding: 5px 10px;
+  font-size: 18px;
+  width: 200px;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* Carousel Styling */
+.carousel-section{
+  margin-top: 1000px;
+}
+
+.carousel-container {
+  display: flex;
+  border-radius: 5px;
+  background-color: #333;
+  width: 1060px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 100px;
+}
+
+.carousel-wrapper {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px;
+  gap: 10px;
+  max-width: 100%;
+  scrollbar-width: none;
+}
+
+
+/* Movie Card Styling */
+.movie-card {
+  min-width: 200px;
+  max-width: 200px;
+  background-color: #333;
+  border-radius: 8px;
+  padding: 0px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in;
+}
+
+.movie-card img:hover {
+  transform: scale(1.05); 
+}
+
+
+.movie-card h3 {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.movie-card p {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Modal dialog styling */
+.modal-dialog {
+  background-color: #6b6767;
+  color: #000;
+  margin: auto;
+  padding: 20px;
+  border-radius: 0.5rem;
+  width: 100%;  /* Make sure modal adapts to different screen sizes */
+  max-width: 500px;
+  max-height: 90vh; /* Ensures the modal does not exceed 90% of viewport height */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow-y: hidden; /* Disable vertical scrolling inside the modal */
+  overflow-x: hidden; /* Disable horizontal scrolling inside the modal */
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Carousel Buttons */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+/* Ensures modal content adapts responsively */
+.modal-dialog * {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Add to Favorite Button Styling */
+.Add-favorite {
+  background-color: #ff4500; /* Orange button color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  outline: none;
+}
+
+/* Button Hover Effect */
+.Add-favorite:hover {
+  background-color: #ff5733; /* Lighter orange on hover */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    gap: 10px;
+  }
+
+  .search-container {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .search-input {
+    width: 80%;
+  }
+  .carousel-container{
+    width: 220px;
+  }
+
+}

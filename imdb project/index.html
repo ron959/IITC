@@ -1,11 +1,98 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMOVIE Website</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/app.js"></script>
 </head>
 <body>
-    <script src="main.js"></script>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <!-- Info Icon -->
+    <a href="about.html" class="nav-icon" id="info-icon">
+      <img src="images/bxs-info-square.png" alt="Info Icon">
+    </a>
+
+    <!-- Heart Icon -->
+    <a href="favorites.html" class="nav-icon" id="heart-icon">
+      <img src="images/bxs-heart.png" alt="Favorites Icon">
+    </a>
+
+    <!-- Search Input + Icon -->
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="Search movies...">
+      <div class="nav-icon" id="search-icon">
+        <img src="images/bxs-search.png" alt="Search Icon">
+      </div>
+    </div>
+
+    <!-- Movie Icon -->
+    <a href="index.html" class="nav-icon" id="home-icon">
+      <img src="images/bxs-movie-play.png" alt="Movie Icon">
+    </a>
+  </nav>
+
+  <div class="carousel-section">
+
+    <!-- Carousel Wrapper for Popular Movies -->
+    <h2>Popular Movies</h2>
+    <div class="carousel">
+      <div class="carousel-container">
+        <button class="carousel-button prev" id="prev-popular">&#10094;</button> <!-- Previous Button -->
+        <div class="carousel-wrapper" id="movies-carousel">
+          <!-- Movie cards will be dynamically inserted here -->
+        </div>
+        <button class="carousel-button next" id="next-popular">&#10095;</button> <!-- Next Button -->
+      </div>
+    </div>
+
+  
+  
+    <!-- Carousel Wrapper for Top Rated Movies -->
+    <h2>Top Rated Movies</h2>
+    <div class="carousel">
+      <div class="carousel-container">
+        <button class="carousel-button prev" id="prev-top-rated">&#10094;</button> <!-- Previous Button -->
+        <div class="carousel-wrapper" id="top-rated-carousel">
+          <!-- Movie cards will be dynamically inserted here -->
+        </div>
+        <button class="carousel-button next" id="next-top-rated">&#10095;</button> <!-- Next Button -->
+      </div>
+    </div>
+
+  
+  
+    <!-- Carousel Wrapper for Upcoming Movies -->
+    <h2>Upcoming Movies</h2>
+    <div class="carousel">
+      <div class="carousel-container">
+        <button class="carousel-button prev" id="prev-upcoming">&#10094;</button> <!-- Previous Button -->
+        <div class="carousel-wrapper" id="upcoming-carousel">
+          <!-- Movie cards will be dynamically inserted here -->
+        </div>
+        <button class="carousel-button next" id="next-upcoming">&#10095;</button> <!-- Next Button -->
+      </div>
+    </div>
+  </div>
+  <!-- Dialog Modal Structure -->
+<dialog id="movie-modal" class="modal-dialog">
+
+    <span class="close" id="close-modal">&times;</span> <!-- Close button -->
+    <div id="modal-movie-info">
+      <!-- Movie details will be dynamically inserted here -->
+    </div>
+
+</dialog>
+
+  
+
+
+
+
+
+
 </body>
 </html>
