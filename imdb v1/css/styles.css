@@ -1,0 +1,431 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.blurred {
+  filter: blur(8px); /* Adjust the blur value as needed */
+
+}
+
+body {
+  background-image: url('/images/newbackground.jpeg') ; 
+  background-size: cover; /* Cover the entire background */
+  background-position: center;
+  background-repeat:calc();
+  font-family: cursive;
+  color: white;
+  margin: 0;
+  padding: 200px;
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+#content-wrapper {
+  transition: filter 0.3s ease-in-out;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+
+}
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent black for glass effect */
+  backdrop-filter: blur(10px) saturate(150%); /* Glass effect with blur and saturation */
+  -webkit-backdrop-filter: blur(10px) saturate(150%); /* Safari support */
+  box-shadow: 0 4px 0px 0px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for glass effect */
+  border-radius: 0 0 10px 10px; /* Rounded bottom corners for a smoother look */
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+
+/* Navigation Icons */
+.nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+#search-icon{
+  border-radius: 50%;
+  cursor: auto;
+  transition: none;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent black for glass effect */
+  backdrop-filter: blur(10px) saturate(150%); /* Glass effect with blur and saturation */
+  transform: none;
+}
+
+
+
+.nav-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.nav-icon:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+/* Search Container */
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 25px;
+  
+}
+.search-container:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+  padding: 5px 10px;
+  font-size: 18px;
+  width: 200px;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Main container for grid */
+.grid-container {
+  display: grid;
+  gap: 20px; /* Space between items */
+  padding: 20px;
+}
+
+/* Responsive Grid Layout */
+#search-grid-container,
+#favorites-grid-container {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 3fr)); /* Minimum width of 200px per column */
+  justify-items: center;
+}
+
+
+  
+
+/* Carousel Styling */
+.carousel-section{
+  margin-top: 1000px;
+  opacity: 0; /* Start invisible */
+  animation: fadeIn 1.5s ease-in-out forwards; /* Fade in animation */
+}
+
+/* Carousel Container with Glass Effect */
+.carousel-container {
+  position: relative;
+  padding: 00px;
+  margin: 20px 0;
+  border-radius: 15px; /* Rounded corners */
+
+  width: 1060px; /* Adjust based on your layout */
+}
+
+
+
+.carousel-wrapper::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for better aesthetics */
+}
+
+
+
+.carousel-wrapper {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px;
+  gap: 10px;
+  max-width: 100%;
+  scrollbar-width: none;
+}
+
+h2 {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background to enhance floating effect */
+  color: #ffffff; /* Light text color for contrast */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Soft shadow for floating illusion */
+  padding: 10px 20px; /* Add padding for better appearance */
+  border-radius: 8px; /* Rounded corners for a softer look */
+  display: inline-block; /* Ensure it's treated as a block for better styling */
+  transform: translateY(-5px); /* Slightly raise the element */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
+}
+
+
+
+
+/* Movie Card Styling */
+.movie-card {
+  min-width: 200px;
+  max-width: 200px;
+  border-radius: 8px;
+  padding: 0px;
+  text-align: center;
+  /* Glass effect */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  /* Subtle shadow for depth */
+  transition: opacity 0.5s ease-out; /* Transition effect for fading */
+  max-width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+  opacity: 0; /* Start invisible */
+  animation: fadeIn 1.2s ease-in-out forwards; /* Fade in over 1.2s */
+}
+
+
+.movie-card.removing {
+  opacity: 0;
+  transform: scale(0.9); /* Slightly shrink the card */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in;
+}
+
+.movie-card img:hover {
+  transform: scale(1.05); 
+}
+
+
+.movie-card h3 {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.movie-card p {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Modal dialog styling */
+/* Modal Dialog with Glass Effect */
+.modal-dialog {
+  filter: none;
+  color: #ffffff; /* Light text color for contrast */
+  background: rgba(34, 136, 141, 0.3); /* Semi-transparent background for glass effect */
+  backdrop-filter: blur(15px) saturate(150%); /* Glass effect with blur and saturation */
+  -webkit-backdrop-filter: blur(15px) saturate(150%); /* Safari support */
+  margin: auto;
+  z-index: 1000;
+  padding: 20px;
+  border-radius: 12px; /* Increased rounding for a more modern look */
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh; /* Limit the height to 90% of the viewport */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+  overflow-x: hidden;
+  opacity: 0; /* Start invisible */
+  animation: fadeIn 1.2s ease-in-out forwards; /* Fade in over 1.2s */
+}
+
+/* Backdrop styling for modal */
+dialog::backdrop {
+  background-color: rgba(21, 38, 167, 0.3); /* Semi-transparent background color */
+  backdrop-filter: blur(10px); /* Blur effect for the background */
+}
+
+/* Image adjustments for dialog */
+dialog img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: contain; /* Ensure the image fits without distortion */
+}
+
+/* Hide scrollbar for better aesthetics */
+dialog::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Carousel Buttons */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+/* Ensures modal content adapts responsively */
+.modal-dialog * {
+  max-width: 100%;
+  overflow: hidden;
+  
+}
+
+
+.carousel-button.prev {
+  left: 10px;
+  height: 150px;
+  border-radius: 5px;
+}
+
+.carousel-button.next {
+  right: 10px;
+  height: 150px;
+  border-radius: 5px;
+}
+
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Add to Favorite Button Styling */
+.add-favorite {
+  background-color: #ff4500; /* Orange button color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  outline: none;
+}
+
+/* Button Hover Effect */
+.Add-favorite:hover {
+  background-color: #ff5733; /* Lighter orange on hover */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.hidden{
+  display: none !important;
+}
+
+.favorites-favorite{
+display: flex;
+align-items: center;
+background-color: rgba(255, 255, 255, 0.1);
+padding: 10px;
+border-radius: 25px;}
+
+
+/* Adjusting the favorite button */
+.favorite-toggle {
+  background-color: #1526a7;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.favorite-toggle:hover {
+  background-color: #1c37ff;
+}
+
+/* CSS for the remove button state */
+.remove-favorite-active {
+  background-color: rgb(121, 5, 5); /* Change color when it’s in "Remove from Favorites" state */
+  color: white; /* Ensure the text is visible */
+}
+
+.remove-favorite-active:hover {
+  background-color: rgb(255, 19, 19);
+}
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 1165px) {
+  .navbar {
+    gap: 10px;
+  }
+
+  .search-container {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .search-input {
+    width: 80%;
+  }
+  .carousel-container{
+    width: 220px;
+  }
+
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

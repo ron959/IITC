@@ -1,0 +1,113 @@
+/* Dark-themed background with fade-in effect */
+body {
+    background: linear-gradient(to right, #0f0f0f, #1a1a1a); /* Dark gradient */
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 1.5s ease-in-out;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Navbar style */
+  .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .nav-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 15px;
+    cursor: pointer;
+  }
+  
+  /* Main container for about content */
+  .about-container {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+    padding: 40px;
+    margin-top: 80px; /* Offset for the fixed navbar */
+    border-radius: 12px;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  /* Text content in the about page */
+  .content h1 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 10px;
+  }
+  
+  .content h2 {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    color: #ffca28; /* Accent color for subheadings */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 8px;
+  }
+  
+  .content p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.8); /* Softer white for readability */
+  }
+  
+  .content .intro {
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+  
+  .content .purpose {
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Fade-in effect for the entire page */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .about-container {
+      padding: 30px;
+      width: 95%;
+    }
+  
+    .content h1 {
+      font-size: 2rem;
+    }
+  
+    .content h2 {
+      font-size: 1.5rem;
+    }
+  }
+  

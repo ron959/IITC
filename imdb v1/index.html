@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMOVIE Website</title>
+    <script type="module" src="js/app.js"></script>
+    <script src="config.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/bxs-movie-play.png">
+  </head>
+  <body>
+    <nav class="navbar">
+      <!-- Info Icon -->
+      <a href="about.html" class="nav-icon" id="info-icon">
+        <img src="images/bxs-info-square.png" alt="Info Icon">
+      </a>
+      
+      <!-- Heart Icon -->
+      <a href="favorites.html" class="nav-icon" id="heart-icon">
+        <img src="images/bxs-heart.png" alt="Favorites Icon">
+      </a>
+      
+      <!-- Search Input + Icon -->
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search movies...">
+        <div class="nav-icon" id="search-icon">
+          <img src="images/bxs-search.png" alt="Search Icon">
+        </div>
+      </div>
+      
+      <!-- Movie Icon -->
+      <a href="index.html" class="nav-icon" id="home-icon">
+        <img src="images/bxs-movie-play.png" alt="Movie Icon">
+      </a>
+    </nav>
+    
+    <!-- Content Wrapper -->
+    <div id="content-wrapper">
+      <!-- Navigation Bar -->
+      
+      <!-- Carousel Section -->
+      
+      <!-- Top Rated Movies Carousel -->
+      <div class="carousel">
+        <h2>Top Rated Movies</h2>
+        <div class="carousel-container">
+          <button class="carousel-button prev" id="prev-top-rated">&#10094;</button>
+          <div class="carousel-wrapper" id="top-rated-carousel">
+            <!-- Movie cards will be dynamically inserted here -->
+          </div>
+          <button class="carousel-button next" id="next-top-rated">&#10095;</button>
+        </div>
+      </div>
+      
+      <!-- Most Popular Movies Carousel -->
+      <div class="carousel">
+        <h2>Most Popular Movies</h2>
+        <div class="carousel-container">
+          <button class="carousel-button prev" id="prev-most-popular">&#10094;</button>
+          <div class="carousel-wrapper" id="most-popular-carousel">
+            <!-- Movie cards will be dynamically inserted here -->
+          </div>
+          <button class="carousel-button next" id="next-most-popular">&#10095;</button>
+        </div>
+      </div>
+      
+      <!-- Latest Movies Carousel -->
+      <div class="carousel">
+        <h2>Latest Movies</h2>
+        <div class="carousel-container">
+          <button class="carousel-button prev" id="prev-latest">&#10094;</button>
+          <div class="carousel-wrapper" id="latest-movies-carousel">
+            <!-- Movie cards will be dynamically inserted here -->
+          </div>
+          <button class="carousel-button next" id="next-latest">&#10095;</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Search Grid Container -->
+    <div id="search-grid-container" class="grid-container hidden">
+      <!-- Search results will be dynamically inserted here -->
+    </div>
+    
+  </body>
+</html>
