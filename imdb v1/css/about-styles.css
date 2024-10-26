@@ -19,7 +19,7 @@ body {
     display: flex;
     justify-content: center;
     padding: 15px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(215, 202, 202, 0.7);
     position: fixed;
     top: 0;
     z-index: 100;

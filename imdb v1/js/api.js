@@ -4,7 +4,7 @@ const options = {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: `Bearer ${API_KEY}` // Use API_KEY from config.js
+    Authorization: `Bearer ${API_KEY}` //  API_KEY from config.js
   }
 };
 
