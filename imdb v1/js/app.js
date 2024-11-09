@@ -11,7 +11,7 @@ async function displayTopRatedMoviesCarousel() {
   const movies = await fetchTopRatedMovies();
   // Sorting movies by rating in descending order (highest rated first)
   const topRatedMovies = movies.sort((a, b) => b.vote_average - a.vote_average).slice(0, 20);
-  // Display the sorted movies in the carousel labeled 'top-rated-carousel'
+  //  the sorted movies in the carousel labeled 'top-rated-carousel'
   displayMoviesInCarousel(topRatedMovies, 'top-rated-carousel');
   // Setting up navigation for the carousel
   setupCarouselNavigation('prev-top-rated', 'next-top-rated', 'top-rated-carousel');

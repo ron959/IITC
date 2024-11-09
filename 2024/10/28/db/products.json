@@ -1,0 +1,72 @@
+[
+    { 
+        "id": 1, 
+        "name": "Wireless Mouse", 
+        "price": 29.99, 
+        "category": "Electronics", 
+        "description": "A smooth and responsive wireless mouse with ergonomic design." 
+    },
+    { 
+        "id": 2, 
+        "name": "Coffee Mug", 
+        "price": 9.99, 
+        "category": "Kitchen", 
+        "description": "A sturdy ceramic mug for your morning coffee." 
+    },
+    { 
+        "id": 3, 
+        "name": "Yoga Mat", 
+        "price": 24.99, 
+        "category": "Fitness", 
+        "description": "A non-slip yoga mat, perfect for home workouts." 
+    },
+    { 
+        "id": 4, 
+        "name": "Bluetooth Speaker", 
+        "price": 49.99, 
+        "category": "Electronics", 
+        "description": "Portable Bluetooth speaker with high-quality sound." 
+    },
+    { 
+        "id": 5, 
+        "name": "Running Shoes", 
+        "price": 79.99, 
+        "category": "Fashion", 
+        "description": "Comfortable and lightweight running shoes for daily jogging." 
+    },
+    { 
+        "id": 6, 
+        "name": "Notebook", 
+        "price": 4.99, 
+        "category": "Stationery", 
+        "description": "A 100-page lined notebook for school or office use." 
+    },
+    { 
+        "id": 7, 
+        "name": "Desk Lamp", 
+        "price": 19.99, 
+        "category": "Home", 
+        "description": "LED desk lamp with adjustable brightness settings." 
+    },
+    { 
+        "id": 8, 
+        "name": "Sunglasses", 
+        "price": 14.99, 
+        "category": "Fashion", 
+        "description": "Stylish sunglasses with UV protection." 
+    },
+    { 
+        "id": 9, 
+        "name": "Electric Kettle", 
+        "price": 34.99, 
+        "category": "Kitchen", 
+        "description": "A fast-boiling electric kettle with stainless steel body." 
+    },
+    { 
+        "id": 10, 
+        "name": "Backpack", 
+        "price": 39.99, 
+        "category": "Travel", 
+        "description": "Durable backpack with multiple compartments for travel." 
+    }
+]

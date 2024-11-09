@@ -36,7 +36,7 @@ export function getFavorites() {
 function renderFavorites() {
     const container = document.querySelector('#favorites-grid-container');
     if (!container) {
-      console.error('Error: favorites-grid-container element not found');
+      console.log('favorites-grid-container element still not selected');
       return;
     }
   
@@ -84,4 +84,5 @@ function renderFavorites() {
   
   // Initial render of favorites when the page loads
   document.addEventListener('DOMContentLoaded', renderFavorites);
+  
   

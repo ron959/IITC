@@ -13,7 +13,7 @@ export function displayMoviesInCarousel(movies, carouselId) {
   carouselWrapper.innerHTML = '';
 
   // Loop through the movies and create movie cards using the reusable function
-  movies.slice(0, 30).forEach(movie => {
+  movies.slice(0, 20).forEach(movie => {
     const movieCard = createMovieCard(movie); // Movie card with toggle button
     carouselWrapper.appendChild(movieCard);
   });
@@ -25,10 +25,6 @@ export function setupCarouselNavigation(prevButtonId, nextButtonId, carouselId) 
   const nextButton = document.getElementById(nextButtonId);
   const prevButton = document.getElementById(prevButtonId);
 
-  if (!carouselWrapper || !nextButton || !prevButton) {
-    console.error(`Error: One of the navigation elements for ${carouselId} is not found`);
-    return;
-  }
 
   nextButton.addEventListener('click', () => {
     carouselWrapper.scrollBy({

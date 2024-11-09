@@ -13,9 +13,9 @@
 /* Global body styling */
 body {
   background-image: url('/images/newbackground.jpeg'); /* Background image for the entire site */
+  background-repeat: repeat;
   background-size: cover; /* Cover the entire background */
   background-position: center; /* Center the background */
-  background-repeat: no-repeat; /* Prevent repeating the image */
   font-family: cursive; /* Font styling */
   color: white; /* Default text color */
   margin: 0; 
@@ -128,10 +128,18 @@ body {
 }
 
 /* Responsive Grid Layout for search and favorites */
+/* Main container for grid layout */
+.grid-container {
+  display: grid;
+  gap: 20px; /* Space between items */
+  padding: 20px;
+}
+
+/* Responsive Grid Layout for search and favorites containers */
 #search-grid-container,
 #favorites-grid-container {
-  grid-template-columns: repeat(auto-fit, minmax(200px, 3fr)); /* Minimum width of 200px per column */
-  justify-items: center; /* Center items horizontally */
+  display: grid; /* Ensure display is set to grid */
+  gap: 20px; /* Spacing between grid items */
 }
 
 /* Styling for the carousel section with animation */
@@ -403,5 +411,19 @@ dialog::-webkit-scrollbar {
   }
   to {
     opacity: 1;
+  }
+}
+
+@media (max-width: 1165px) {
+  #search-grid-container,
+  #favorites-grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+  }
+}
+
+@media (min-width: 1166px) {
+  #search-grid-container,
+  #favorites-grid-container {
+    grid-template-columns: repeat(5, 1fr); /* 5 columns on larger screens */
   }
 }

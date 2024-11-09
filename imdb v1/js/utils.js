@@ -57,16 +57,19 @@ export function openMovieDialog(movie) {
   const modalContent = document.createElement('div');
   modalContent.classList.add('modal-content');
 
-  modalContent.innerHTML = `
+
+modalContent.innerHTML = `
   <span class="close" id="close-modal">exit</span>
   <h2>${movie.title}</h2>
   <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
   <p><strong>Release Date:</strong> ${movie.release_date}</p>
   <p><strong>Overview:</strong> ${movie.overview}</p>
   <p><strong>Rating:</strong> ${movie.vote_average}</p>
+  <p><strong>Popularity:</strong> ${movie.popularity}</p> <!-- Added Popularity here -->
   <p><strong>For Adults?:</strong> ${movie.adult ? 'Yes' : 'No'}</p>
-  <p><strong>Movie ID:</strong> ${movie.id}</p> <!-- Added Movie ID here -->
+  <p><strong>Movie ID:</strong> ${movie.id}</p> <!-- Movie ID -->
 `;
+
 
   // Append the modal content to the dialog
   dialog.appendChild(modalContent);
